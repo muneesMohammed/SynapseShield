@@ -1,0 +1,14 @@
+{
+  "@id": "dtmi:example:DeviceProperties;2",
+  "@type": "Interface",
+  "@context": "dtmi:dtdl:context;2",
+  "displayName": "DeviceProperties",
+  "contents": [
+    { "@type": "Property", "name": "deviceId", "schema": "string" },
+    { "@type": "Property", "name": "ipAddress", "schema": "string" },
+    { "@type": "Property", "name": "os", "schema": "string" },
+    { "@type": "Property", "name": "status", "schema": "string" },
+    { "@type": "Property", "name": "patchLevel", "schema": "string" },
+    { "@type": "Property", "name": "vulnerabilityScore", "schema": "string" }
+  ]
+}

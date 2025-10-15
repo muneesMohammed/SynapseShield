@@ -1,0 +1,13 @@
+{
+  "@id": "dtmi:example:TrafficProperties;2",
+  "@type": "Interface",
+  "@context": "dtmi:dtdl:context;2",
+  "displayName": "TrafficProperties",
+  "contents": [
+    { "@type": "Property", "name": "protocol", "schema": "string" },
+    { "@type": "Property", "name": "port", "schema": "string" },
+    { "@type": "Property", "name": "trafficVolume", "schema": "integer" },
+    { "@type": "Property", "name": "latency", "schema": "integer" },
+    { "@type": "Property", "name": "suspiciousFlag", "schema": "integer" }
+  ]
+}

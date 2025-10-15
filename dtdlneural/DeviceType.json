@@ -1,0 +1,26 @@
+{
+  "@id": "dtmi:example:DeviceType;1",
+  "@type": "Interface",
+  "displayName": "DeviceType",
+  "@context": "dtmi:dtdl:context;2",
+  "contents": [
+    {
+      "@type": "Relationship",
+      "name": "contains",
+      "displayName": "contains",
+      "target": "dtmi:example:Logs;1",
+      "properties": [
+        {
+          "name": "DeviceName",
+          "@type":"Property",
+          "schema": "string"
+        },
+        {
+          "name": "DeviceAddress",
+          "@type":"Property",
+          "schema": "string"
+        }
+      ]
+    }
+  ]
+}

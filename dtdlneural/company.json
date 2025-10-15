@@ -1,0 +1,20 @@
+
+  {
+    "@id": "dtmi:example:Company;1",
+    "@type": "Interface",
+    "displayName": "Company",
+    "@context": "dtmi:dtdl:context;2",
+    "contents": [
+      {
+          "@type": "Property",
+          "name": "companyName",
+          "schema": "string"
+        },
+      {
+        "@type": "Relationship",
+        "name": "contains",
+        "displayName": "contains",
+        "target": "dtmi:example:DeviceType;1"
+      }
+    ]
+  }

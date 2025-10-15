@@ -1,0 +1,16 @@
+no poweshell cmd
+
+
+
+docker run -it -e "<connection string>" -e "Template={\"deviceId\":\"$.DeviceId\", \"ipAddress\":\"$.IpAddress\",\"os\":\"$.Os\",\"status\":\"$.Status\",\"patchLevel\":\"$.PatchLevel\",\"vulnerabilityScore\":\"$.vulnerabilityScore\",\"protocol\":\"$.Protocol\",\"port\":\"$.Port\",\"trafficVolume\":$.TrafficVolume,\"latency\":$.Latency,\"suspiciousFlag\":$.SuspiciousFlag,\"attackType\":\"$.AttackType\",\"attackProbability\":$.AttackProbability,\"attackPath\":$.AttackPath,\"detectedBy\":$.DetectedBy,\"time\":\"$.Time\"}" -e "Variables=[{\"name\":\"Protocol\",\"values\":[\"HTTP\",\"MQTT\",\"CoAP\"]},{\"name\":\"Port\",\"values\":[\"80\",\"1883\",\"5683\"]},{\"name\":\"TrafficVolume\",\"random\":true,\"min\":100,\"max\":1000},{\"name\":\"Latency\",\"random\":true,\"min\":5,\"max\":100},{\"name\":\"SuspiciousFlag\",\"random\":true,\"min\":0,\"max\":1},{\"name\":\"AttackType\",\"values\":[\"DDoS\",\"SQLInjection\",\"Phishing\",\"None\"]},{\"name\":\"AttackProbability\",\"random\":true,\"min\":0,\"max\":100},{\"name\":\"AttackPath\",\"random\":true,\"min\":1,\"max\":5},{\"name\":\"DetectedBy\",\"random\":true,\"min\":0,\"max\":1},{\"name\":\"IpAddress\",\"values\":[\"198.258.0.80\",\"198.52.8.83\",\"195.56.83.0\"]},{\"name\":\"Os\",\"values\":[\"windows\",\"linux\",\"IoT firmware\"]},{name:\"Status\", values: [\"Active\", \"Inactive\", \"Compromised\"]},{name:\"PatchLevel\", values: [\"latest\", \"outdated\"]},{name:\"vulnerabilityScore\",\"random\":true,\"min\":0,\"max\":1}]" -e DeviceCount=2 -e MessageCount=10 mcr.microsoft.com/oss/azure-samples/azureiot-telemetrysimulator
+
+
+
+docker run -it -e "<con string>" -e DeviceCount=10 mcr.microsoft.com/oss/azure-samples/azureiot-simulatordeviceprovisioning
+
+
+
+
+
+
+docker run -it -e "<con string>" -e "Template={\"deviceId\":\"$.DeviceId\", \"ipAddress\":\"$.IpAddress\",\"os\":\"$.Os\",\"status\":\"$.Status\",\"patchLevel\":\"$.PatchLevel\",\"vulnerabilityScore\":\"$.vulnerabilityScore\",\"protocol\":\"$.Protocol\",\"port\":\"$.Port\",\"trafficVolume\":$.TrafficVolume,\"latency\":$.Latency,\"suspiciousFlag\":$.SuspiciousFlag,\"attackType\":\"$.AttackType\",\"attackProbability\":$.AttackProbability,\"attackPath\":$.AttackPath,\"detectedBy\":$.DetectedBy,\"time\":\"$.Time\"}" -e "Variables=[{\"name\":\"Protocol\",\"values\":[\"HTTP\",\"MQTT\",\"CoAP\"]},{\"name\":\"Port\",\"values\":[\"80\",\"1883\",\"5683\"]},{\"name\":\"TrafficVolume\",\"random\":true,\"min\":100,\"max\":1000},{\"name\":\"Latency\",\"random\":true,\"min\":5,\"max\":100},{\"name\":\"SuspiciousFlag\",\"random\":true,\"min\":0,\"max\":1},{\"name\":\"AttackType\",\"values\":[\"DDoS\",\"SQLInjection\",\"Phishing\",\"None\"]},{\"name\":\"AttackProbability\",\"random\":true,\"min\":0,\"max\":100},{\"name\":\"AttackPath\",\"random\":true,\"min\":1,\"max\":5},{\"name\":\"DetectedBy\",\"random\":true,\"min\":0,\"max\":1},{\"name\":\"IpAddress\",\"values\":[\"198.258.0.80\",\"198.52.8.83\",\"195.56.83.0\"]},{\"name\":\"Os\",\"values\":[\"windows\",\"linux\",\"IoT firmware\"]},{name:\"Status\", values: [\"Active\", \"Inactive\", \"Compromised\"]},{name:\"PatchLevel\", values: [\"latest\", \"outdated\"]},{name:\"vulnerabilityScore\",\"random\":true,\"min\":0,\"max\":1}]" -e DeviceCount=2 -e MessageCount=10 mcr.microsoft.com/oss/azure-samples/azureiot-telemetrysimulator

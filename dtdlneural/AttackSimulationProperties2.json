@@ -1,0 +1,12 @@
+{
+  "@id": "dtmi:example:AttackSimulationProperties;2",
+  "@type": "Interface",
+  "@context": "dtmi:dtdl:context;2",
+  "displayName": "AttackSimulationProperties",
+  "contents": [
+    { "@type": "Property", "name": "attackType", "schema": "string" },
+    { "@type": "Property", "name": "attackProbability", "schema": "integer" },
+    { "@type": "Property", "name": "attackPath", "schema": "integer" },
+    { "@type": "Property", "name": "detectedBy", "schema": "integer" }
+  ]
+}

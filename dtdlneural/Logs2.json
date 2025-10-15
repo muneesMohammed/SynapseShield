@@ -1,0 +1,25 @@
+{
+  "@id": "dtmi:example:Logs;2",
+  "@type": "Interface",
+  "@context": "dtmi:dtdl:context;2",
+  "displayName": "Logs",
+  "contents": [
+    
+    {
+      "@type": "Component",
+      "name": "DeviceProperties",
+      "schema": "dtmi:example:DeviceProperties;2"
+    },
+    {
+      "@type": "Component",
+      "name": "TrafficProperties",
+      "schema": "dtmi:example:TrafficProperties;2"
+    },
+    {
+      "@type": "Component",
+      "name": "AttackSimulationProperties",
+      "schema": "dtmi:example:AttackSimulationProperties;2"
+    }
+    
+  ]
+}
