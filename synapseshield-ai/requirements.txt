@@ -1,0 +1,9 @@
+fastapi
+uvicorn[standard]
+torch
+scikit-learn
+pandas
+azure-identity
+azure-digitaltwins-core
+azure-eventhub
+python-dotenv
