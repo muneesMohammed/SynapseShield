@@ -5,6 +5,7 @@ import os
 import json
 
 ADT_URL = os.environ.get("ADT_URL")  # e.g. https://<your-instance>.api.<region>.digitaltwins.azure.net
+ADT_URL="https://neuraldigitaltwin.api.wcus.digitaltwins.azure.net/"
 
 if ADT_URL is None:
     raise EnvironmentError("Set ADT_URL env var")

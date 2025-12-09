@@ -4,13 +4,17 @@ import os
 import json
 import pandas as pd
 from ai_engine import load_model, detect_anomalies_from_df, AttackPredictor
-from adt_client.py import update_twin_property  # small import path note below
+from adt_client import update_twin_property  # small import path note below
 
 # Environment variables
 EVENT_HUB_CONN_STR = os.environ.get("EVENT_HUB_CONN_STR")
 EVENT_HUB_NAME = os.environ.get("EVENT_HUB_NAME")
 CONSUMER_GROUP = os.environ.get("EVENT_HUB_CONSUMER_GROUP", "$Default")
 MODEL_DEVICE = os.environ.get("MODEL_DEVICE", "cpu")
+
+EVENT_HUB_CONN_STR="Endpoint=sb://ihsuprodblres073dednamespace.servicebus.windows.net/;SharedAccessKeyName=iothubowner;SharedAccessKey=T4prxHjDtgSpyZ25VQp2Noz4jYbdhcfqRAIoTBmFC3U=;EntityPath=iothub-ehub-adtelemetr-67596481-26a0cbd6dc"
+EVENT_HUB_NAME="adtelemetryhub"
+
 
 if not EVENT_HUB_CONN_STR or not EVENT_HUB_NAME:
     raise EnvironmentError("Set EVENT_HUB_CONN_STR and EVENT_HUB_NAME")

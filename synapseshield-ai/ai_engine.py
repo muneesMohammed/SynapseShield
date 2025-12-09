@@ -33,12 +33,18 @@ class Autoencoder(nn.Module):
 # ------------------
 # Preprocessing
 # ------------------
-def fit_scaler(df: pd.DataFrame):
+def fit_scaler(df):
     scaler = MinMaxScaler()
-    scaler.fit(df.values)
-    # persist scaler arrays
-    np.savez(SCALER_PATH, min=scaler.data_min_, max=scaler.data_max_, scale=scaler.scale_, var=scaler.var_)
+    scaler.fit(df)
+    np.savez(
+        SCALER_PATH,
+        data_min=scaler.data_min_,
+        data_max=scaler.data_max_,
+        scale=scaler.scale_,
+        min_offset=scaler.min_
+    )
     return scaler
+
 
 def load_scaler():
     if not os.path.exists(SCALER_PATH):
